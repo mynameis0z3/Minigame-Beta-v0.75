@@ -63,7 +63,7 @@
   .actions button { width: 58px; height: 58px; font-size: 15px; }
   #btnAtk { background: rgba(255,159,199,0.14); }
   #btnChg { background: rgba(255,95,126,0.14); }
-  #btnJump { background: rgba(159,242,255,0.12); }
+  #btnJump { background: rgba(159,242,255,0.12); }，
 
   #btnMute {
     position: absolute; top: 8px; right: 8px; z-index: 5;
@@ -541,7 +541,7 @@ function startMusic(){
 }
 btnMute.onclick=()=>{
   musicOn=!musicOn;
-  if(musicGain) musicGain.gain.value=musicOn?.32:0;
+  if(musicGain) musicGain.gain.value=musicOn?.22:0;
   if(sfxGain) sfxGain.gain.value=musicOn?.72:0;
   btnMute.textContent=musicOn?'🔊':'🔈';
 };
@@ -1662,7 +1662,7 @@ function drawCaptiveHero(g,camX){
   if(!endingScene) return;
   const e=endingScene, x=e.captiveX-camX, y=GROUND_Y-27;
   const freed=e.freed;
-  // 男版調保勇者：短髮、藍黑制服、筋膜刀護具
+  // 調保勇者：短髮、藍黑制服、筋膜刀護具
   px2(g,x+4,y+20,4,7,'#25242a'); px2(g,x+11,y+20,4,7,'#25242a');
   px2(g,x+2,y+8,15,13,freed?'#246f91':'#465a67');
   px2(g,x+5,y,10,9,'#e8bb94');
@@ -1689,7 +1689,7 @@ function showOverlayVictory(){
   overlay.classList.remove('hidden');
   overlay.innerHTML = `
     <span class="tag">TO BE CONTINUED</span>
-    <h1>男版調保勇者解放！</h1>
+    <h1>調保勇者解放！</h1>
     <p>阿珠博士打倒沾黏魔王後，走向關卡深處，<br>用筋膜刀解除繩索，救出被囚禁的調保勇者。</p>
     <h2 style="margin:4px 0;color:#bd505a;letter-spacing:8px">待續</h2>
     <button id="again">再玩一次</button>
@@ -1700,7 +1700,7 @@ function showOverlayGameOver(){
   overlay.classList.remove('hidden');
   overlay.innerHTML = `
     <span class="tag">GAME OVER</span>
-    <h1>博士倒下了...</h1>
+    <h1>戰到力竭...</h1>
     <p>緊繃的筋膜太頑固了！要不要再挑戰一次？</p>
     <button id="retry">重新挑戰</button>
   `;
